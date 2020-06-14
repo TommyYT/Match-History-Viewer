@@ -1,1 +1,2 @@
 hrdWSzQtFgQkfEZaW3Ud
+https://api.mozambiquehe.re/bridge?player=heyimlifeline&platform=PC&auth=hrdWSzQtFgQkfEZaW3Ud&history=1&action=info

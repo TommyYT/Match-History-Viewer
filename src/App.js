@@ -1,45 +1,30 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import React, { Component } from 'react';
+import React from 'react';
 
-class App extends Component {
+export default class App extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [],
-      isLoaded: false,
-    }
-  }
+  state = {
+    loading: true,
+    name: null,
+    Caustic: null,
+  };
 
-  componentDidMount() {
-
-    fetch("https://api.mozambiquehe.re/bridge?player=heyimlifeline&platform=PC&auth=hrdWSzQtFgQkfEZaW3Ud&history=1&action=info")
-      .then(res => res.json())
-      .then(json => {
-        this.setState({
-          isLoaded: true,
-          items: json,
-        })
-      });
-
-  }
+  async componentDidMount() {
+    const url = "https://api.mozambiquehe.re/bridge?player=funfps&platform=PC&auth=hrdWSzQtFgQkfEZaW3Ud";
+    const response = await fetch(url);
+    const data = await response.json();
+    this.setState({ name: data.global.name, Caustic: data.legends.all.Caustic , loading: false });
+    console.log(data.global.name);
+  };
 
   render() {
-    var { isLoaded, items } = this.state;
-
-    if (!isLoaded) {
-      return <div>Loading...</div>
-    }
-    else {
-      return (
-        <div className="App">
-          Data has been loaded.
-        </div>
-      )
-    }
+    return <div>
+      {this.state.loading || !this.state.name ?
+        (<div>loading...</div>) : (<div><p>Name: {this.state.name}</p>
+        <p>Caustic: {this.state.Caustic.kills} </p></div>)}
+    </div>;
   }
+
+
 }
-
-
-  export default App;
