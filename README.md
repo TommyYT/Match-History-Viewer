@@ -1,13 +1,9 @@
 # Apex Legends Stats Viewer
 > A small and simple web-app to view a player's apex legends statistics
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
 This web-app is a simple and small and straightforward way of finding a players Apex Legends statistics by input of Username and Platform. The app currently uses an API and is being build in Reactjs Bootstrap. 
 
-![](./images/logo.png)
+![](./src/assets/logo.png)
 
 ## Usage example
 
