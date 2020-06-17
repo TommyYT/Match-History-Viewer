@@ -45,3 +45,17 @@ body {
 .logo {
  width: 50%;
 }
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  margin: 3% 0 3% 0;
+  width: 100%;
+  color: rgb(129, 129, 129);
+  text-align: center;
+}
+
+p {
+  margin-bottom: -0.5%;
+}

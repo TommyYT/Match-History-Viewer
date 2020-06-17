@@ -190,8 +190,12 @@ export default class App extends React.Component {
 
                         </div>
                     </Row>
+                    <div class="footer"><p>© 2020 TOMMY. All rights Reserved.</p>
+                                        <p>Fontys Hogeschool ICT</p></div>
+                </Container>
+                
+                )}
 
-                </Container>)}
         </div>;
     }
 
